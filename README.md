@@ -1,3 +1,17 @@
-# soapwswithexternalxsd
+## testing build and run 
+* mvn clean package
+* mvn spring-boot:run
 
-Repo to demo soap ws that used multipeel external xsd. the purpose is to reproduce and issue on apim 
+
+## Calling country 1
+
+curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws  > output.xml   && xmllint --format output.xml
+## Calling country 2 
+
+curl --header "content-type: text/xml" -d @request2.xml http://localhost:8080/ws  > output.xml   && xmllint --format output.xml
+
+
+## Calling weather 
+
+curl --header "content-type: text/xml" -d @weatherrequest.xml http://localhost:8080/ws  > output.xml   && xmllint --format output.xml
+
