@@ -10,6 +10,7 @@
                   targetNamespace="http://spring.io/guides/gs-producing-web-service4"
                   xsi:schemaLocation="http://schemas.xmlsoap.org/wsdl/ ">
     <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xsd:schema>
 
         <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
                     schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd" />
