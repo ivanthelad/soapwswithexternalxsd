@@ -32,15 +32,15 @@
             </xsd:element>
         </xsd:schema>
         <xsd:schema >
-        <!--xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
+        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
                     schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd" />
         <xsd:import namespace="http://spring.io/guides/gs-producing-web-service2"
                     schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries2.xsd"/>
         <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3"
-                    schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/weather.xsd"/-->
-        <xsd:import  namespace="http://spring.io/guides/gs-producing-web-service/" schemaLocation="countries.xsd" />
+                    schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/weather.xsd"/>
+        <!--xsd:import  namespace="http://spring.io/guides/gs-producing-web-service/" schemaLocation="countries.xsd" />
         <xsd:import namespace="http://spring.io/guides/gs-producing-web-service2/" schemaLocation="countries2.xsd" />
-        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3/" schemaLocation="weather.xsd" />
+        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3/" schemaLocation="weather.xsd" /-->
         </xsd:schema>
     </wsdl:types>
     <wsdl:message name="getCountryResponse" >
