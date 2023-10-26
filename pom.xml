@@ -64,7 +64,6 @@
 					<sources>
 						<source>${project.basedir}/src/main/resources/countries.xsd</source>
 						<source>${project.basedir}/src/main/resources/countries2.xsd</source>
-
 						<source>${project.basedir}/src/main/resources/weather.xsd</source>
 
 					</sources>

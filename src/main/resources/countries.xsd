@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://spring.io/guides/gs-producing-web-service"                    xmlns:country="http://spring.io/guides/gs-producing-web-service"
-           elementFormDefault="qualified">
+           targetNamespace="http://spring.io/guides/gs-producing-web-service/"  elementFormDefault="unqualified"     xmlns:country="http://spring.io/guides/gs-producing-web-service/"
+         >
 
     <xs:element name="getCountryRequest">
         <xs:complexType>
@@ -27,7 +27,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="currency">
+    <xs:simpleType name="currency" >
         <xs:restriction base="xs:string">
             <xs:enumeration value="GBP"/>
             <xs:enumeration value="EUR"/>

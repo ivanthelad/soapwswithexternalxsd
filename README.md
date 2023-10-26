@@ -31,3 +31,5 @@ az container show --resource-group $RG --name $aciname --query "{FQDN:ipAddress.
 ### WSDL can be found under 
 http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/wsdl.wsdl
 
+### https://www.tutorialworks.com/wsdl/
+
