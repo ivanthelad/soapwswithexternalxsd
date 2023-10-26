@@ -1,50 +1,50 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                   xmlns:sch="http://spring.io/guides/gs-producing-web-service"
                   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tns="http://spring.io/guides/gs-producing-web-service"
-                  targetNamespace="http://spring.io/guides/gs-producing-web-service"
+                  xmlns:country="http://spring.io/guides/gs-producing-web-service"
+                  xmlns:country2="http://spring.io/guides/gs-producing-web-service2"
+
+                  xmlns:weather="http://spring.io/guides/gs-producing-web-service3"
+
+                  targetNamespace="http://spring.io/guides/gs-producing-web-service4"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://schemas.xmlsoap.org/wsdl/ ">
     <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
-        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
-                    schemaLocation="https://xsdhostingdemo2.blob.core.windows.net/xsd/countries.xsd"/>
-        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
+        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service" xmlns:country="http://spring.io/guides/gs-producing-web-service"
+                    schemaLocation="https://xsdhostingdemo2.blob.core.windows.net/xsd/countries.xsd" />
+        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service2"  xmlns:country2="http://spring.io/guides/gs-producing-web-service2"
                     schemaLocation="https://xsdhostingdemo2.blob.core.windows.net/xsd/countries2.xsd"/>
-        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
+        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3" xmlns:weather="http://spring.io/guides/gs-producing-web-service3"
                     schemaLocation="https://xsdhostingdemo2.blob.core.windows.net/xsd/weather.xsd"/>
     </wsdl:types>
     <wsdl:message name="getCountryResponse">
-        <wsdl:part element="tns:getCountryResponse" name="getCountryResponse"></wsdl:part>
+        <wsdl:part element="country:getCountryResponse" name="getCountryResponse"/>
     </wsdl:message>
     <wsdl:message name="getCountryRequest">
-        <wsdl:part element="tns:getCountryRequest" name="getCountryRequest"></wsdl:part>
+        <wsdl:part element="country:getCountryRequest" name="getCountryRequest"/>
     </wsdl:message>
 
 
     <wsdl:message name="getCountryResponse2">
-        <wsdl:part element="tns:getCountryResponse" name="getCountryResponse2"></wsdl:part>
+        <wsdl:part element="country2:getCountryResponse2" name="getCountryResponse2"/>
     </wsdl:message>
     <wsdl:message name="getCountryRequest2">
-        <wsdl:part element="tns:getCountryRequest2" name="getCountryRequest2"></wsdl:part>
+        <wsdl:part element="country2:getCountryRequest2" name="getCountryRequest2"/>
     </wsdl:message>
 
     <wsdl:portType name="CountriesPort">
         <wsdl:operation name="getCountry">
-            <wsdl:input message="tns:getCountryRequest" name="getCountryRequest"></wsdl:input>
-            <wsdl:output message="tns:getCountryResponse" name="getCountryResponse"></wsdl:output>
+            <wsdl:input message="country:getCountryRequest" name="getCountryRequest"/>
+            <wsdl:output message="country:getCountryResponse" name="getCountryResponse"/>
         </wsdl:operation>
-
-
     </wsdl:portType>
 
     <wsdl:portType name="CountriesPort2">
-
-
         <wsdl:operation name="getCountry2">
-            <wsdl:input message="tns:getCountryRequest2" name="getCountryRequest2"></wsdl:input>
-            <wsdl:output message="tns:getCountryResponse2" name="getCountryResponse2"></wsdl:output>
+            <wsdl:input message="country2:getCountryRequest2" name="getCountryRequest2"/>
+            <wsdl:output message="country2:getCountryResponse2" name="getCountryResponse2"/>
         </wsdl:operation>
 
     </wsdl:portType>
@@ -53,13 +53,13 @@
 
 
         <wsdl:operation name="getWeatherByPlaceName">
-            <wsdl:input message="tns:GetWeatherByPlaceName" name="GetWeatherByPlaceName"></wsdl:input>
-            <wsdl:output message="tns:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"></wsdl:output>
+            <wsdl:input message="weather:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
+            <wsdl:output message="weather:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
         </wsdl:operation>
 
     </wsdl:portType>
 
-    <wsdl:binding name="CountriesPortSoap11" type="tns:CountriesPort">
+    <wsdl:binding name="CountriesPortSoap11" type="country:CountriesPort">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="getCountry">
             <soap:operation soapAction=""/>
@@ -93,7 +93,7 @@
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="CountriesPortService">
-        <wsdl:port binding="tns:CountriesPortSoap11" name="CountriesPortSoap11">
+        <wsdl:port binding="country:CountriesPortSoap11" name="CountriesPortSoap11">
             <soap:address location=""/>
         </wsdl:port>
     </wsdl:service>

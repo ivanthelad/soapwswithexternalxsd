@@ -1,7 +1,7 @@
 package com.example.producingwebservice;
 
-import io.spring.guides.gs_producing_web_service.Country2;
-import io.spring.guides.gs_producing_web_service.Currency2;
+import io.spring.guides.gs_producing_web_service2.Country2;
+import io.spring.guides.gs_producing_web_service2.Currency2;
 import jakarta.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;

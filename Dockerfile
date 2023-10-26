@@ -1,5 +1,5 @@
 ## dokcer based on jdk 1.19
-FROM  openjdk:17-jdk-slim
+FROM  openjdk:17-jdk-slim as builder
 
 ## copy jar file to docker
 COPY target/*.jar app.jar

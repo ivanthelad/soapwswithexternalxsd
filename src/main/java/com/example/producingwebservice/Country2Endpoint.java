@@ -1,9 +1,9 @@
 package com.example.producingwebservice;
 
 import io.spring.guides.gs_producing_web_service.GetCountryRequest;
-import io.spring.guides.gs_producing_web_service.GetCountryRequest2;
 import io.spring.guides.gs_producing_web_service.GetCountryResponse;
-import io.spring.guides.gs_producing_web_service.GetCountryResponse2;
+import io.spring.guides.gs_producing_web_service2.GetCountryRequest2;
+import io.spring.guides.gs_producing_web_service2.GetCountryResponse2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -11,7 +11,7 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class Country2Endpoint {
-    private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
+    private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service2";
 
     private CountryRepository countryRepository;
 
