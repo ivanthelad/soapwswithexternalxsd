@@ -93,6 +93,13 @@
         <wsdl:message name="getCountryRequest2">
             <wsdl:part element="ext2:getCountryRequest2" name="getCountryRequest2"/>
         </wsdl:message>
+    <wsdl:message name="GetWeatherByPlaceName">
+        <wsdl:part element="ext3:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
+    </wsdl:message>
+    <wsdl:message name="GetWeatherByPlaceNameResponse">
+        <wsdl:part element="ext3:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
+    </wsdl:message>
+
 
         <wsdl:portType name="CountriesPort">
             <wsdl:operation name="getCountry">
@@ -113,8 +120,8 @@
 
 
             <wsdl:operation name="getWeatherByPlaceName">
-                <wsdl:input message="ext3:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
-                <wsdl:output message="ext3:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
+                <wsdl:input message="tns:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
+                <wsdl:output message="tns:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
             </wsdl:operation>
 
         </wsdl:portType>
