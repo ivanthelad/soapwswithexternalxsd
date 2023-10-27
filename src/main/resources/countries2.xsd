@@ -1,5 +1,5 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://spring.io/guides/gs-producing-web-service2/" elementFormDefault="unqualified"   xmlns:country2="http://spring.io/guides/gs-producing-web-service2">
+           targetNamespace="http://spring.io/guides/gs-producing-web-service2/" elementFormDefault="unqualified"   xmlns:country2="http://spring.io/guides/gs-producing-web-service2/">
 
     <xs:element name="getCountryRequest2">
         <xs:complexType>

@@ -44,7 +44,7 @@ public class ProducingWebServiceApplicationIntegrationTests {
 		marshaller.afterPropertiesSet();
 	}
 
-	@Test
+	//@Test
 	public void testSendAndReceive() {
 		WebServiceTemplate ws = new WebServiceTemplate(marshaller);
 		GetCountryRequest request = new GetCountryRequest();

@@ -13,7 +13,7 @@ WsdlEndpointName="basic"
 
 az apim api import --path $APIPath --resource-group $ResourceGroupName \
     --service-name $APIMServiceName --api-id $APIId \
-    --specification-format $SpecificationFormat --specification-path /Users/ivmckinl/projects/randv/soapwswithexternalxsd/src/main/resources/example.wsdl \
+    --specification-format $SpecificationFormat --specification-path example.wsdl \
     --wsdl-service-name $WsdlServiceName --wsdl-endpoint-name $WsdlEndpointName
 # Import API
 exit
