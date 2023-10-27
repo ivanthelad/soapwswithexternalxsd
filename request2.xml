@@ -2,8 +2,8 @@
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
    <Header/>
    <Body>
-      <getCountryRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://spring.io/guides/gs-producing-web-service2">
+      <getCountryRequest2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://spring.io/guides/gs-producing-web-service2">
          <name xmlns="">Spain</name>
-      </getCountryRequest>
+      </getCountryRequest2>
    </Body>
 </Envelope>
