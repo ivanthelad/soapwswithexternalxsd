@@ -3,8 +3,8 @@
     <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                       xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                       xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                      xmlns:tns="http://spring.io/guides/gs-producing-web-service4/"
-                      targetNamespace="http://spring.io/guides/gs-producing-web-service4/">
+                      xmlns:tns="http://yourtargetnamespace"
+                      targetNamespace="http://yourtargetnamespace">
         <wsdl:documentation>Definition for a web service called BookService,
             which can be used to add or retrieve books from a collection.
         </wsdl:documentation>
@@ -23,7 +23,8 @@
                     </xsd:complexType>
                 </xsd:element>
             </xsd:schema-->
-            <xsd:schema  targetNamespace="http://spring.io/guides/gs-producing-web-service4/">
+            <xsd:schema  xmlns:tns="http://yourtargetnamespace" targetNamespace="http://yourtargetnamespace" >
+                <xsd:include schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd" />
                  <xsd:import namespace="http://spring.io/guides/gs-producing-web-service"
                         schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd" />
             <!--xsd:import namespace="http://spring.io/guides/gs-producing-web-service2/"
@@ -36,7 +37,7 @@
             </xsd:schema>
         </wsdl:types>
         <wsdl:message name="getCountryResponse" >
-            <wsdl:part  element="tns:getCountryResponse" type="tns:getCountryResponse" name="getCountryResponse"/>
+            <wsdl:part  element="tns:getCountryResponse"  name="getCountryResponse"/>
         </wsdl:message>
         <wsdl:message name="getCountryRequest">
             <wsdl:part element="tns:getCountryRequest" name="getCountryRequest"/>
