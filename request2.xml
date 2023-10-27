@@ -1,9 +1,9 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-				  xmlns:gs="http://spring.io/guides/gs-producing-web-service2">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <gs:getCountryRequest2>
-         <gs:name>Spain</gs:name>
-      </gs:getCountryRequest2>
-   </soapenv:Body>
-</soapenv:Envelope>
+<?xml version="1.0" encoding="utf-8"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+   <Header/>
+   <Body>
+      <getCountryRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://spring.io/guides/gs-producing-web-service2">
+         <name xmlns="">Spain</name>
+      </getCountryRequest>
+   </Body>
+</Envelope>

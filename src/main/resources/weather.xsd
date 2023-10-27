@@ -1,7 +1,7 @@
 
 
 
-<s:schema elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service3/"  xmlns:weather="http://spring.io/guides/gs-producing-web-service3/" xmlns:s="http://www.w3.org/2001/XMLSchema"  >
+<s:schema elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service3"  xmlns:weather="http://spring.io/guides/gs-producing-web-service3" xmlns:s="http://www.w3.org/2001/XMLSchema"  >
     <s:element name="GetWeatherByZipCode">
         <s:complexType>
             <s:sequence>
