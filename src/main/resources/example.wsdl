@@ -1,98 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-                      xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                      xmlns:tns="http://yourtargetnamespace"
-                      xmlns:ext="http://spring.io/guides/gs-producing-web-service"
-                      xmlns:ext2="http://spring.io/guides/gs-producing-web-service2"
-                      xmlns:ext3="http://spring.io/guides/gs-producing-web-service3"
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:tns="http://yourtargetnamespace"
+                  xmlns:ext="http://spring.io/guides/gs-producing-web-service"
+                  xmlns:ext2="http://spring.io/guides/gs-producing-web-service2"
+                  xmlns:ext3="http://spring.io/guides/gs-producing-web-service3"
 
-                      targetNamespace="http://yourtargetnamespace">
-        <wsdl:documentation>Definition for a web service called BookService,
-            which can be used to add or retrieve books from a collection.
-        </wsdl:documentation>
+                  targetNamespace="http://yourtargetnamespace">
+    <wsdl:documentation>Definition for a web service called BookService,
+        which can be used to add or retrieve books from a collection.
+    </wsdl:documentation>
 
     <wsdl:types>
-            <!--xsd:schema     xmlns:tns="http://spring.io/guides/gs-producing-web-service4/"
-                                   targetNamespace="http://spring.io/guides/gs-producing-web-service4/" >
-                <xsd:element name="222" ref="country:getCountryRequest"/>
 
 
-                <xsd:element name="getCountryResponse">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element ref="country:getCountryResponse"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:schema-->
+        <xsd:schema xmlns:tns="http://yourtargetnamespace"
+                    targetNamespace="http://yourtargetnamespace"
+                    xmlns:ext="http://spring.io/guides/gs-producing-web-service"
+                    xmlns:ext2="http://spring.io/guides/gs-producing-web-service2"
+                    xmlns:ext3="http://spring.io/guides/gs-producing-web-service3">
 
-        <!--xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                    targetNamespace="http://yourtargetnamespace"   xmlns:tns="http://yourtargetnamespace">
 
-            <xsd:element name="getCountryRequest">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
-
-            <xsd:element name="getCountryResponse">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="country" type="tns:country" minOccurs="1" maxOccurs="1"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
-
-            <xsd:complexType name="country" >
-                <xsd:sequence>
-                    <xsd:element name="name" type="xsd:string"/>
-                    <xsd:element name="population" type="xsd:int"/>
-                    <xsd:element name="capital" type="xsd:string"/>
-                    <xsd:element name="currency" type="tns:currency"/>
-                </xsd:sequence>
-            </xsd:complexType>
-
-            <xsd:simpleType name="currency" >
-                <xsd:restriction base="xsd:string">
-                    <xsd:enumeration value="GBP"/>
-                    <xsd:enumeration value="EUR"/>
-                    <xsd:enumeration value="PLN"/>
-                </xsd:restriction>
-            </xsd:simpleType>
-        </xsd:schema-->
-
-        <xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:tns="http://yourtargetnamespace" targetNamespace="http://yourtargetnamespace" >
-        <xsd:import xmlns:ext="http://spring.io/guides/gs-producing-web-service" namespace="http://spring.io/guides/gs-producing-web-service"
-                    schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd" />
-        <xsd:import xmlns:ext2="http://spring.io/guides/gs-producing-web-service2" namespace="http://spring.io/guides/gs-producing-web-service2"
+            <xsd:import xmlns:ext="http://spring.io/guides/gs-producing-web-service"
+                    namespace="http://spring.io/guides/gs-producing-web-service"
+                    schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries.xsd"/>
+            <xsd:import xmlns:ext="http://spring.io/guides/gs-producing-web-service2"
+                    namespace="http://spring.io/guides/gs-producing-web-service2"
                     schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/countries2.xsd"/>
-        <xsd:import xmlns:ext3="http://spring.io/guides/gs-producing-web-service3"   namespace="http://spring.io/guides/gs-producing-web-service3"
-                    schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/weather.xsd"/>
-        <!--xsd:import  namespace="http://spring.io/guides/gs-producing-web-service/" schemaLocation="countries.xsd"  />
-        <!xsd:import namespace="http://spring.io/guides/gs-producing-web-service2/" schemaLocation="countries2.xsd" />
-        <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3/" schemaLocation="weather.xsd" /-->
+            <xsd:import xmlns:ext="http://spring.io/guides/gs-producing-web-service3"
+                        namespace="http://spring.io/guides/gs-producing-web-service3"
+                        schemaLocation="https://raw.githubusercontent.com/ivanthelad/soapwswithexternalxsd/main/src/main/resources/weather.xsd"/>
+            <!--xsd:import  namespace="http://spring.io/guides/gs-producing-web-service/" schemaLocation="countries.xsd"  />
+            <!xsd:import namespace="http://spring.io/guides/gs-producing-web-service2/" schemaLocation="countries2.xsd" />
+            <xsd:import namespace="http://spring.io/guides/gs-producing-web-service3/" schemaLocation="weather.xsd" /-->
 
         </xsd:schema>
 
 
     </wsdl:types>
-        <wsdl:message name="getCountryResponse" >
-            <wsdl:part  element="ext:getCountryResponse"  name="getCountryResponse"/>
-        </wsdl:message>
-        <wsdl:message name="getCountryRequest">
-            <wsdl:part element="ext:getCountryRequest" name="getCountryRequest"     />
-        </wsdl:message>
+    <wsdl:message name="getCountryResponse">
+        <wsdl:part element="ext:getCountryResponse" name="getCountryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getCountryRequest">
+        <wsdl:part element="ext:getCountryRequest" name="getCountryRequest"/>
+    </wsdl:message>
 
-        <wsdl:message name="getCountryResponse2">
-            <wsdl:part element="ext2:getCountryResponse2" name="getCountryResponse2"/>
-        </wsdl:message>
-        <wsdl:message name="getCountryRequest2">
-            <wsdl:part element="ext2:getCountryRequest2" name="getCountryRequest2"/>
-        </wsdl:message>
+    <wsdl:message name="getCountryResponse2">
+        <wsdl:part element="ext2:getCountryResponse2" name="getCountryResponse2"/>
+    </wsdl:message>
+    <wsdl:message name="getCountryRequest2">
+        <wsdl:part element="ext2:getCountryRequest2" name="getCountryRequest2"/>
+    </wsdl:message>
     <wsdl:message name="GetWeatherByPlaceName">
         <wsdl:part element="ext3:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
     </wsdl:message>
@@ -101,68 +61,75 @@
     </wsdl:message>
 
 
-        <wsdl:portType name="CountriesPort">
-            <wsdl:operation name="getCountry">
-                <wsdl:input message="tns:getCountryRequest" name="getCountryRequest"/>
-                <wsdl:output message="tns:getCountryResponse" name="getCountryResponse"/>
-            </wsdl:operation>
-        </wsdl:portType>
+    <wsdl:portType name="CountriesPort">
+        <wsdl:operation name="getCountry">
+            <wsdl:input message="tns:getCountryRequest" name="getCountryRequest"/>
+            <wsdl:output message="tns:getCountryResponse" name="getCountryResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
 
-        <wsdl:portType name="CountriesPort2">
-            <wsdl:operation name="getCountry2">
-                <wsdl:input message="tns:getCountryRequest2" name="getCountryRequest2"/>
-                <wsdl:output message="tns:getCountryResponse2" name="getCountryResponse2"/>
-            </wsdl:operation>
+    <wsdl:portType name="CountriesPort2">
+        <wsdl:operation name="getCountry2">
+            <wsdl:input message="tns:getCountryRequest2" name="getCountryRequest2"/>
+            <wsdl:output message="tns:getCountryResponse2" name="getCountryResponse2"/>
+        </wsdl:operation>
 
-        </wsdl:portType>
+    </wsdl:portType>
 
-        <wsdl:portType name="WeatherPort">
-
-
-            <wsdl:operation name="GetWeatherByPlaceName">
-                <wsdl:input message="tns:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
-                <wsdl:output message="tns:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
-            </wsdl:operation>
-
-        </wsdl:portType>
-        <!--todo add porttype for weather and countries2 . although this worked veofre
-        -->
-        <wsdl:binding name="CountriesPortSoap11" type="tns:CountriesPort">
-            <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-            <wsdl:operation name="getCountry">
-                <soap:operation soapAction=""/>
-                <wsdl:input  name="getCountryRequest" >
-                    <soap:body use="literal"/>
-                </wsdl:input>
-                <wsdl:output name="getCountryResponse">
-                    <soap:body use="literal"/>
-                </wsdl:output>
-            </wsdl:operation>
-
-            <wsdl:operation name="getCountry2" >
-                <soap:operation soapAction=""/>
-                <wsdl:input name="getCountryRequest2">
-                    <soap:body use="literal"/>
-                </wsdl:input>
-                <wsdl:output name="getCountryResponse2">
-                    <soap:body use="literal"/>
-                </wsdl:output>
-            </wsdl:operation>
+    <wsdl:portType name="WeatherPort">
 
 
-            <wsdl:operation name="GetWeatherByPlaceName">
-                <soap:operation soapAction=""/>
-                <wsdl:input name="GetWeatherByPlaceName">
-                    <soap:body use="literal"/>
-                </wsdl:input>
-                <wsdl:output name="GetWeatherByPlaceNameResponse">
-                    <soap:body use="literal"/>
-                </wsdl:output>
-            </wsdl:operation>
-        </wsdl:binding>
-        <wsdl:service name="CountriesPortService">
-            <wsdl:port binding="tns:CountriesPortSoap11" name="CountriesPortSoap11">
-                <soap:address location="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/"/>
-            </wsdl:port>
-        </wsdl:service>
-    </wsdl:definitions>
+        <wsdl:operation name="GetWeatherByPlaceName">
+            <wsdl:input message="tns:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
+            <wsdl:output message="tns:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
+    <!--todo add porttype for weather and countries2 . although this worked veofre
+    -->
+    <wsdl:binding name="CountriesPortSoap11" type="tns:CountriesPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getCountry">
+            <soap:operation soapAction="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/getCountry"/>
+            <wsdl:input name="getCountryRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getCountryResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:binding name="CountriesPortSoap112" type="tns:CountriesPort2">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <!-- this is the issue  -->
+        <wsdl:operation name="getCountry2">
+            <soap:operation soapAction="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/getCountry2"/>
+            <wsdl:input name="getCountryRequest2">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getCountryResponse2">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:binding name="CountriesPortSoap113" type="tns:WeatherPort">
+          <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetWeatherByPlaceName">
+            <soap:operation soapAction="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/GetWeatherByPlaceName"/>
+            <wsdl:input name="GetWeatherByPlaceName">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetWeatherByPlaceNameResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CountriesPortService">
+        <wsdl:port binding="tns:CountriesPortSoap11" name="CountriesPortSoap11">
+            <soap:address location="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/"/>
+        </wsdl:port>
+    
+    </wsdl:service>
+</wsdl:definitions>
