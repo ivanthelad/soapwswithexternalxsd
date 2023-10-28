@@ -119,13 +119,14 @@
         <wsdl:portType name="WeatherPort">
 
 
-            <wsdl:operation name="getWeatherByPlaceName">
+            <wsdl:operation name="GetWeatherByPlaceName">
                 <wsdl:input message="tns:GetWeatherByPlaceName" name="GetWeatherByPlaceName"/>
                 <wsdl:output message="tns:GetWeatherByPlaceNameResponse" name="GetWeatherByPlaceNameResponse"/>
             </wsdl:operation>
 
         </wsdl:portType>
-
+        <!--todo add porttype for weather and countries2 . although this worked veofre
+        -->
         <wsdl:binding name="CountriesPortSoap11" type="tns:CountriesPort">
             <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
             <wsdl:operation name="getCountry">
@@ -149,7 +150,7 @@
             </wsdl:operation>
 
 
-            <wsdl:operation name="getWeatherByPlaceName">
+            <wsdl:operation name="GetWeatherByPlaceName">
                 <soap:operation soapAction=""/>
                 <wsdl:input name="GetWeatherByPlaceName">
                     <soap:body use="literal"/>
