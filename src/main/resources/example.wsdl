@@ -130,6 +130,6 @@
         <wsdl:port binding="tns:CountriesPortSoap11" name="CountriesPortSoap11">
             <soap:address location="http://soapxsddemo.westeurope.azurecontainer.io:8080/ws/"/>
         </wsdl:port>
-    
+
     </wsdl:service>
 </wsdl:definitions>
